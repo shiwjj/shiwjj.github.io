@@ -5,15 +5,23 @@
   
 
   
-  <title>Hexo</title>
+  <title>Java 排序之插入排序、希尔排序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="今天学习了一下 Java 数组的相关操作，包含排序和查找，现在先将排序记录巩固一下。常用并且比较重要的几种排序：插入排序、希尔排序、快速排序、归并排序、冒泡排序、选择排序。 一、插入排序1. 插入排序算法思想1) 普遍思想插入排序的算法是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序的数据，在已排序的序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，在从后向前扫描过程中">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 排序之插入排序、希尔排序">
+<meta property="og:url" content="http://yoursite.com/2019/08/26/Java 排序之插入排序、希尔排序/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天学习了一下 Java 数组的相关操作，包含排序和查找，现在先将排序记录巩固一下。常用并且比较重要的几种排序：插入排序、希尔排序、快速排序、归并排序、冒泡排序、选择排序。 一、插入排序1. 插入排序算法思想1) 普遍思想插入排序的算法是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序的数据，在已排序的序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，在从后向前扫描过程中">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/08/26/mYAy4GhKqJuZ1Tn.png">
+<meta property="og:image" content="https://i.loli.net/2019/08/26/5Jymk2KpDQnbTCf.png">
+<meta property="og:updated_time" content="2019-09-08T11:45:52.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Java 排序之插入排序、希尔排序">
+<meta name="twitter:description" content="今天学习了一下 Java 数组的相关操作，包含排序和查找，现在先将排序记录巩固一下。常用并且比较重要的几种排序：插入排序、希尔排序、快速排序、归并排序、冒泡排序、选择排序。 一、插入排序1. 插入排序算法思想1) 普遍思想插入排序的算法是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序的数据，在已排序的序列中从后向前扫描，找到相应位置并插入。插入排序在实现上，在从后向前扫描过程中">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/26/mYAy4GhKqJuZ1Tn.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,58 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/07/hello-world/" class="article-date">
-  <time datetime="2019-09-07T14:58:43.525Z" itemprop="datePublished">2019-09-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/07/hello-world/" data-id="ck0az6ck40001z8vd1vyv5dm2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java 排序之插入排序、希尔排序" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Java 排序之插入排序、希尔排序" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/26/Java 排序之插入排序、希尔排序/" class="article-date">
   <time datetime="2019-08-26T02:43:53.000Z" itemprop="datePublished">2019-08-26</time>
@@ -128,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/26/Java 排序之插入排序、希尔排序/">Java 排序之插入排序、希尔排序</a>
+    <h1 class="article-title" itemprop="name">
+      Java 排序之插入排序、希尔排序
     </h1>
   
 
@@ -209,11 +166,23 @@
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/07/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
+</article>
 
 </section>
         
